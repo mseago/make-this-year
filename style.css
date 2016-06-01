@@ -60,17 +60,18 @@ table {
 .row {
   width: 620px;
   margin: 0 auto;
+	padding: 0;
   position: relative;
 }
 h1 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
   color: purple;
   /*color: linear-gradient(purple, blue);*/
   background-color: #000;
 }
 .learn-how {
-  font-size: 46px;
+  font-size: 44px;
   font-weight: bold;
   margin-top: 60px;
   color: #FFF;
@@ -96,7 +97,8 @@ h1 {
 .enter-your-email input {
   font-family: 'Karla', Helvetica, sans-serif;
   padding: 1em;
-  width: 380px;
+	margin-right: 10px;
+	width: 380px;
   font-size: 20px;
   background-color: rgba(230, 230, 230, 1);
   border-radius: 3px;
@@ -106,7 +108,7 @@ h1 {
   background-color: #FFF;
 }
 .send-invite {
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   padding: 25px;
   width: 125px;
   border-radius: 3px;
@@ -122,30 +124,31 @@ h1 {
 .enter-your-email .send-invite {
   padding-bottom: 20px;
 }
-h2 {
+#instructors h2 {
   font-size: 22px;
-  font-weight: 700;
-  margin-top: 77px;
+  font-weight: 600;
+	margin-bottom: 36px;
 }
 #instructors {
-  width: 620px;
-  margin: 0 auto;
-  position: relative;
+	margin-top: 77px;
+	line-height: 21px;
 }
 #instructors img {
-  width: 91%;
-  padding: 30px 0 20px 0;
+  width: 193px;
+	height: 130px;
 }
-#instructors li {
-  width: 33.3%;
-  display: inline;
+#instructors ul li {
+  width: 193px;
+	margin-right: 13px;
   float: left;
 }
 #instructors span {
-  font-size: 1.25em;
-  padding-bottom: 5px;
+  font-size: 19px;
+	display: block;
+	margin: 11px 0 4px 0;
 }
 #instructors p {
+	font-size: 15px;
   color: #999;
   line-height: 1.5;
   font-weight: 300;
@@ -154,10 +157,17 @@ h2 {
   clear: both;
   padding-top: 50px;
 }
+#marketing h2 {
+  font-size: 22px;
+  font-weight: 600;
+	/*margin-bottom: 36px;*/
+  /*margin-top: 77px;*/
+}
 #marketing p {
+	color: #000;
   margin: 28px 0;
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 28px;
 }
 #marketing a {
@@ -172,8 +182,12 @@ h2 {
   width: 100%;
 }
 #footer .join {
+	font-size: 22px;
   color: #000;
   margin-top: 20px;
+}
+#footer .join span {
+	font-weight: 700;
 }
 #footer .enter-your-email input {
   background-color: rgba(230, 230, 230, 1);
@@ -191,4 +205,77 @@ background-color: #FFF;
   clear: both;
   padding: 97px 0 55px 0;
   color: #999;
+}
+
+/*responsive starts here*/
+@media screen and (max-width: 619px) {
+	.row {
+		width: 88%;
+	}
+	h1 {
+		width: 220px;
+		font-size: 25px;
+	}
+	.learn-how {
+	  font-size: 31px;
+		font-weight: bold;
+	  line-height: 40px;
+	  margin-top: 38px;
+	  color: #FFF;
+	}
+	.enter-your-email input {
+		width: 95%;
+		padding: 14px 20px;
+		margin: 10px 5px 10px 0;
+	}
+	.send-invite {
+		width: 96%;
+		padding: 14px 20px;
+		margin: 0 5px 0 0;
+	}
+	h2 {
+	  font-size: 20px;
+		line-height: 1.4em;
+	  /*font-weight: 600;
+	  margin-top: 77px;*/
+	}
+	#instructors ul {
+		display: table;
+		width: 100%;
+		border-spacing: 0 20px;
+		margin-top: -20px;
+	}
+	#instructors ul li {
+	  width: auto;
+		display: table-row;
+	  float: none !important;
+	}
+	#instructors span {
+		margin-bottom: 0;
+			  /*float: none !important;*/
+	}
+	#instructors li img {
+		width: 110px;
+		height: 110px;
+	}
+	#instructors li p {
+		display: table-cell;
+		width: auto;
+		padding-left: 20px;
+		vertical-align: middle;
+	}
+	#marketing p {
+		font-size: 16px;
+		line-height: 27px;
+	}
+	#footer .enter-your-email input {
+		width: 95%;
+		padding: 14px 20px;
+		margin: 10px 5px 10px 0;
+	}
+	#footer .send-invite {
+		width: 96%;
+		padding: 14px 20px;
+		margin: 0 5px 0 0;
+	}
 }
